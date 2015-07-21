@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
-cd /project
-unzip package.zip
-cd -
+unzip /project/package.zip -d .
 th /validate.lua
