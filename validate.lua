@@ -3,7 +3,7 @@ require 'nn'
 require 'nngraph'
 
 local T = torch.Tensor
-local net = torch.load('/project/trained-network.t7')
+local net = torch.load('./trained-network.t7')
 
 -- Normally, validation data would be something the network hasn't seen before
 local validationData = {
