@@ -2,8 +2,8 @@ FROM kaixhin/torch
 
 RUN luarocks install nngraph
 
-COPY validate.lua /validate.lua
+WORKDIR /
+COPY validate.lua validate.lua
+COPY run.sh run.sh
 
-COPY trained-network.t7 /trained-network.t7
-
-CMD th /validate.lua
+CMD ["/bin/bash", "run.sh"]
