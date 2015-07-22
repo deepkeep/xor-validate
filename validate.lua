@@ -2,8 +2,8 @@ require 'torch'
 require 'nn'
 require 'nngraph'
 
-local T = torch.Tensor
-local net = torch.load('./trained-network.t7')
+-- The network is assumed to be found inside the package at ./network.t7
+local net = torch.load('./package/network.t7')
 
 -- Normally, validation data would be something the network hasn't seen before
 local validationData = {
@@ -20,4 +20,7 @@ for i, d in pairs(validationData) do
   err = err + criterion:forward(net:forward(d.x), d.y)
 end
 err = err / #validationData
+
+-- Finally output the score of this network. The system will parse this number
+-- and display it on the networks page in deepkeep.
 print("## SCORE: " .. err)
