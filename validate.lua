@@ -3,7 +3,7 @@ require 'nn'
 require 'nngraph'
 
 -- The network is assumed to be found inside the package at ./network.t7
-local net = torch.load('./package/network.t7')
+local net = torch.load('/package/network.t7')
 
 -- Normally, validation data would be something the network hasn't seen before
 local validationData = {
