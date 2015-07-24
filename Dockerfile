@@ -1,4 +1,4 @@
-FROM kaixhin/torch
+FROM docker.deepkeep.co/deepkeep/torch
 
 RUN luarocks install nngraph
 
