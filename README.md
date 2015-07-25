@@ -7,9 +7,9 @@ Scores xor networks
 Add the following to your networks `package.json`:
 ```json
 ...
-  "verifiers": [
+  "validators": [
     {
-      "name": "deepkeep/xor-verify"
+      "name": "deepkeep/xor-validate"
     }
   ]
 ...
